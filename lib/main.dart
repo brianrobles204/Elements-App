@@ -1,14 +1,15 @@
 import 'dart:convert';
 
-import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 
 const kRowCount = 10;
-const kColCount = 18;
 
 const kContentSize = 64.0;
 const kBorderWidth = 2.0;
+
+const kBorderInset = EdgeInsets.all(kBorderWidth);
 
 
 void main() {
@@ -73,7 +74,7 @@ class TablePage extends StatelessWidget {
 
   Widget _buildTable(List<ElementData> elements) {
     final tiles = elements.map((element) => element != null ? ElementTile(element)
-        : Container(color: Colors.black38, margin: EdgeInsets.all(kBorderWidth))).toList();
+        : Container(color: Colors.black38, margin: kBorderInset)).toList();
 
     return SingleChildScrollView(
       child: SizedBox(height: kRowCount * (kContentSize + (kBorderWidth * 2)),
@@ -129,7 +130,7 @@ class ElementTile extends StatelessWidget implements PreferredSizeWidget {
     ];
 
     final tile = Container(
-      margin: EdgeInsets.all(kBorderWidth),
+      margin: kBorderInset,
       width: kContentSize,
       height: kContentSize,
       foregroundDecoration: BoxDecoration(
@@ -140,7 +141,7 @@ class ElementTile extends StatelessWidget implements PreferredSizeWidget {
             MaterialPageRoute(builder: (_) => DetailPage(element))) : null,
         fillColor: Colors.grey[800],
         disabledElevation: 10.0,
-        padding: EdgeInsets.all(kBorderWidth * 2),
+        padding: kBorderInset * 2.0,
         child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: tileText),
       ),
     );
