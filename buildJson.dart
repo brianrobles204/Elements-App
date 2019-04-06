@@ -204,8 +204,8 @@ const kColorMap = {
   Category.transitionMetal     : [ 0xFFFFCA28, 0xFFFFF263 ],
   Category.postTransitionMetal : [ 0xFF11998E, 0xFF38EF7D ],
   Category.metalloid           : [ 0xFF0072FF, 0xFF00C6FF ],
-  Category.reactiveNonmetal    : [ 0xFF9796F0, 0xFFFBC7D4 ],
-  Category.nobleGas            : [ 0xFF536DFE, 0xFF8E99F3 ],
+  Category.reactiveNonmetal    : [ 0xFF536DFE, 0xFF8E99F3 ],
+  Category.nobleGas            : [ 0xFF9796F0, 0xFFFBC7D4 ],
   Category.unknown             : [ 0xFF757F9A, 0xFFD7DDE8 ],
 };
 
