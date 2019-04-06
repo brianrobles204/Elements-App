@@ -35,7 +35,7 @@ main() async {
   };
 
   var outputSink = outputFile.openWrite()
-    ..write(jsonEncode(elements));
+    ..write(JsonEncoder.withIndent('  ').convert(elements));
   await outputSink.flush();
   await outputSink.close();
 
