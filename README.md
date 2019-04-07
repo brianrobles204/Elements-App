@@ -19,6 +19,7 @@ The included dart script, `buildJson.dart`, can be run to generate a new `elemen
 
 
 ## Screenshots
+![Screencast](assets/screenshots/screencast.gif)
 ![Screenshot 1](assets/screenshots/screenshot_1.png)
 ![Screenshot 2](assets/screenshots/screenshot_2.png)
 ![Screenshot 3](assets/screenshots/screenshot_3.png)
@@ -193,4 +194,9 @@ class ElementTile extends StatelessWidget implements PreferredSizeWidget {
 - **Google Flutter Team**
 - **Wikimedia Foundation** - Summary extracts from Wikipedia
 - **IUPAC** - Chemical element information
-- **Cathy and Joe** for letting me use their laptop and wifi, respectively
+- **Cathy** and **Joe** - for letting me use their laptop and wifi, respectively
+
+
+----
+
+*Brian Carlos L. Robles (2019)*
