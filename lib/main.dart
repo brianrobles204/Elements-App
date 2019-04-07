@@ -7,9 +7,9 @@ import 'package:flutter/services.dart';
 const kRowCount = 10;
 
 const kContentSize = 64.0;
-const kBorderWidth = 2.0;
+const kGutterWidth = 2.0;
 
-const kBorderInset = EdgeInsets.all(kBorderWidth);
+const kGutterInset = EdgeInsets.all(kGutterWidth);
 
 
 void main() {
@@ -74,10 +74,10 @@ class TablePage extends StatelessWidget {
 
   Widget _buildTable(List<ElementData> elements) {
     final tiles = elements.map((element) => element != null ? ElementTile(element)
-        : Container(color: Colors.black38, margin: kBorderInset)).toList();
+        : Container(color: Colors.black38, margin: kGutterInset)).toList();
 
     return SingleChildScrollView(
-      child: SizedBox(height: kRowCount * (kContentSize + (kBorderWidth * 2)),
+      child: SizedBox(height: kRowCount * (kContentSize + (kGutterWidth * 2)),
         child: GridView.count(crossAxisCount: kRowCount, children: tiles,
           scrollDirection: Axis.horizontal,),),);
   }
@@ -130,7 +130,7 @@ class ElementTile extends StatelessWidget implements PreferredSizeWidget {
     ];
 
     final tile = Container(
-      margin: kBorderInset,
+      margin: kGutterInset,
       width: kContentSize,
       height: kContentSize,
       foregroundDecoration: BoxDecoration(
@@ -141,7 +141,7 @@ class ElementTile extends StatelessWidget implements PreferredSizeWidget {
             MaterialPageRoute(builder: (_) => DetailPage(element))) : null,
         fillColor: Colors.grey[800],
         disabledElevation: 10.0,
-        padding: kBorderInset * 2.0,
+        padding: kGutterInset * 2.0,
         child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: tileText),
       ),
     );
