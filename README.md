@@ -20,6 +20,7 @@ The included dart script, `buildJson.dart`, can be run to generate a new `elemen
 
 ## Screenshots
 ![Screencast](assets/screenshots/screencast.gif)
+
 ![Screenshot 1](assets/screenshots/screenshot_1.png)
 ![Screenshot 2](assets/screenshots/screenshot_2.png)
 ![Screenshot 3](assets/screenshots/screenshot_3.png)
