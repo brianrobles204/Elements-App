@@ -13,6 +13,7 @@ const kGutterInset = EdgeInsets.all(kGutterWidth);
 
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   final gridList = rootBundle.loadString('assets/elementsGrid.json')
       .then((source) => jsonDecode(source)['elements'] as List)
       .then((list) => list.map((json) => json != null ? ElementData.fromJson(json) : null).toList());
