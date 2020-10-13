@@ -1,0 +1,35 @@
+name: elements 
+version: 0.1.2
+summary: The Modern Periodic Table.
+description: The modern periodic table using dart and flutter.
+
+base: core18 
+grade: stable
+confinement: strict
+
+slots:
+  dbus-elements:
+    interface: dbus
+    bus: session
+    name: com.example.Elements
+
+apps:
+    elements:
+      command: Elements
+      environment:
+        WAYLAND_DISPLAY: no-wayland
+      extensions: [flutter-dev]
+      plugs:
+      - desktop
+      - desktop-legacy 
+      - opengl
+      - x11
+      - unity7
+      slots:
+      - dbus-elements
+
+parts:
+  elements:
+    source: .
+    plugin: flutter
+    flutter-target: lib/main.dart
