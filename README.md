@@ -1,16 +1,12 @@
 # Elements
 
-A new Flutter project.
+A truly cross-platform Periodic table app built with Google's Flutter framework.
 
-## Getting Started
+## Screenshots
 
-This project is a starting point for a Flutter application.
+### Desktop Version:
 
-A few resources to get you started if this is your first Flutter project:
+<img src = "Screenshot from 2020-10-12 01-55-27.png"> </img>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<img src = "Screenshot from 2020-10-12 02-04-52.png"> </img>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
