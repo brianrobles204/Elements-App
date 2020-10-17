@@ -1,4 +1,4 @@
-module elements/go
+module Elements/go
 
 go 1.15
 
