@@ -1,5 +1,5 @@
 name: elements 
-version: 0.1.2
+version: 0.1.2.1
 summary: The Modern Periodic Table.
 description: The modern periodic table using dart and flutter.
 
@@ -8,6 +8,7 @@ confinement: strict
 apps:
     elements:
       command: Elements
+      extensions: [flutter-dev]
 
 parts:
   elements:
