@@ -4,8 +4,10 @@ summary: The Modern Periodic Table.
 description: The modern periodic table using dart and flutter.
 
 base: core18 
-grade: stable
 confinement: strict
+
+architectures:
+- build-on: amd64
 
 slots:
   dbus-elements:
@@ -16,15 +18,7 @@ slots:
 apps:
     elements:
       command: Elements
-      environment:
-        WAYLAND_DISPLAY: no-wayland
       extensions: [flutter-dev]
-      plugs:
-      - desktop
-      - desktop-legacy 
-      - opengl
-      - x11
-      - unity7
       slots:
       - dbus-elements
 
@@ -33,3 +27,13 @@ parts:
     source: .
     plugin: flutter
     flutter-target: lib/main.dart
+    
+plugs:
+  desktop:
+  desktop-legacy:
+  x11:
+  unity7:
+  wayland:
+  opengl:
+  home:
+
