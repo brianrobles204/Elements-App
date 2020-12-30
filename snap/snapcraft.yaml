@@ -6,7 +6,7 @@
   confinement: strict
   base: core18
   apps:
-    purple-task:
+    elements:
       command: Elements
       extensions: [flutter-master]
   parts:
