@@ -18,7 +18,7 @@ slots:
 apps:
     elements:
       command: Elements
-      extensions: [flutter-dev]
+      extensions: [flutter-master]
       slots:
       - dbus-elements
 
