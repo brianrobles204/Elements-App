@@ -67,11 +67,11 @@ class TablePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[900],
+      backgroundColor: Colors.black87,
       appBar: AppBar(
           title: Text('Elements'),
           centerTitle: true,
-          backgroundColor: Colors.blueGrey[800]),
+          backgroundColor: Colors.grey[800]),
       body: FutureBuilder(
         future: gridList,
         builder: (_, snapshot) => snapshot.hasData
@@ -85,7 +85,7 @@ class TablePage extends StatelessWidget {
     final tiles = elements
         .map((element) => element != null
             ? ElementTile(element)
-            : Container(color: Colors.black38, margin: kGutterInset))
+            : Container(color: Colors.grey[800], margin: kGutterInset))
         .toList();
 
     return SingleChildScrollView(
@@ -130,7 +130,15 @@ class DetailPage extends StatelessWidget {
         backgroundColor: Color.lerp(Colors.grey[850], element.colors[1], 0.2),
         bottom: ElementTile(element, isLarge: true),
       ),
-      body: ListView(padding: EdgeInsets.only(top: 24.0), children: listItems),
+      body: Center(
+        child: ConstrainedBox(
+          child: ListView(
+              padding: EdgeInsets.only(top: 24.0), children: listItems),
+          constraints: BoxConstraints(
+            maxWidth: 700,
+          ),
+        ),
+      ),
     );
   }
 }
@@ -164,6 +172,7 @@ class ElementTile extends StatelessWidget implements PreferredSizeWidget {
       width: kContentSize,
       height: kContentSize,
       foregroundDecoration: BoxDecoration(
+        //color: Colors.grey[800],
         gradient: LinearGradient(colors: element.colors),
         backgroundBlendMode: BlendMode.multiply,
       ),
