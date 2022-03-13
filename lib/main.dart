@@ -47,7 +47,6 @@ class ElementsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = ThemeData(
       brightness: Brightness.dark,
-      accentColor: Colors.grey,
       textTheme:
           Typography.whiteMountainView.apply(fontFamily: 'Roboto Condensed'),
       primaryTextTheme:
@@ -158,7 +157,7 @@ class ElementTile extends StatelessWidget implements PreferredSizeWidget {
         alignment: AlignmentDirectional.centerStart,
         child: Text('${element.number}', style: TextStyle(fontSize: 10.0)),
       ),
-      Text(element.symbol, style: Theme.of(context).primaryTextTheme.headline),
+      Text(element.symbol, style: Theme.of(context).primaryTextTheme.headline6),
       Text(
         element.name,
         maxLines: 1,
