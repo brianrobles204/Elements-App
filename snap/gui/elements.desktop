@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Elements
+Comment=The Periodic Table
+Icon=${SNAP}/meta/gui/icon.png
+Exec=elements
+Terminal=false
+Type=Application
+Categories=Education;
+Keywords=Tables;Periodic;Chemistry;Science;Flutter;Education;Done;
